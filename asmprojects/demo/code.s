@@ -11,7 +11,7 @@ myString: .asciz "Hello World!"
 main: 
     lea %eax, myString # eax will hold our address
     printLoop:
-       put_char [%eax]
+       put_char [%eax] # I made this macro, see the data.s file
        inc %eax
        cmpb [%eax], 0 
        jne printLoop
